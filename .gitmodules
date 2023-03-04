@@ -1,3 +1,6 @@
 [submodule "CSS"]
 	path = CSS
 	url = https://github.com/kevinalbert7/DDW-CSS.git
+[submodule "DDW-Javascript"]
+	path = DDW-Javascript
+	url = https://github.com/kevinalbert7/DDW-Javascript.git
