@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Modal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <!--
+        - Ne pas hésiter à optimiser le CSS et le JS avec une purge CSS
+        pour ne pas importer toutes les classes, propriétés et méthodes
+        inutilisées
+        - Voir tous les sites primés sur awwwards qui utilisent Bootstrap
+    -->
+
+  <body>
+    <!--
+        Bouton
+        data-bs-toggle="modal" : obligatoire dur le bouton qui ouvre la modale 
+        data-bs-target="#modal1" : obligatoire pour cibler l'id de la modale
+    -->
+    <button
+      type="button"
+      class="d-block mt-5 btn btn-primary mx-auto"
+      data-bs-toggle="modal"
+      data-bs-target="#modal1"
+    >
+      Open Modal
+    </button>
+
+    <!--
+        Modale
+        id="modal1" : obligatoire pour lier le bouton d'ouverture à la div
+        Classe:
+        - fade : rajoute une animation de fondu et de translate sur Y
+        Attribut :
+        - data-bs-backdrop="static" : empêche de fermer la modale en cliquent sur l'overlay
+    -->
+    <div class="modal fade" id="modal1">
+      <!--
+            Classes utitles:
+            - modal-dialog-scrollable : ajoute une barre de scroll dans la modale (si le texte est long par exemple)
+            - modal-dialog-centered : centre la modale par rapport à la page
+        -->
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" aria-labelledby="modal title">
+              Modal Title
+            </h5>
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" aria-describedby="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Reprehenderit, sint amet! Quam facere error est?
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
